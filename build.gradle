@@ -23,14 +23,14 @@ android {
     compileSdkVersion 19
     buildToolsVersion '19.0.1'
 
-    signingConfigs {
-        release {
-            storeFile file("keystores/release.keystore")
-            storePassword "your-keystore-password"
-            keyAlias "your-alias"
-            keyPassword "your-alias-password"
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file("keystores/release.keystore")
+//            storePassword "your-keystore-password"
+//            keyAlias "your-alias"
+//            keyPassword "your-alias-password"
+//        }
+//    }
 
     buildTypes {
         release {
