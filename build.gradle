@@ -34,13 +34,13 @@ android {
 
     buildTypes {
         release {
-            zipAlign true
+//            zipAlign true
 //            signingConfig signingConfigs.release
         }
         debug {
-            zipAlign true
-        }
-    }
+//            zipAlign true
+//        }
+//    }
 }
 
 dependencies {
