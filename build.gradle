@@ -11,9 +11,39 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+apply plugin: 'android'
 
 allprojects {
     repositories {
         jcenter()
     }
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.1'
+
+    signingConfigs {
+        release {
+            storeFile file("keystores/release.keystore")
+            storePassword "your-keystore-password"
+            keyAlias "your-alias"
+            keyPassword "your-alias-password"
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlign true
+            signingConfig signingConfigs.release
+        }
+        debug {
+            zipAlign true
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.0.0'
+    compile 'com.android.support:support-v4:19.0.0'
 }
